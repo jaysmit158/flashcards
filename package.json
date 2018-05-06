@@ -1,0 +1,20 @@
+{
+  "name": "flashcards",
+  "version": "1.0.0",
+  "description": "Flashcards using Express",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaysmit158/flashcards.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaysmit158/flashcards/issues"
+  },
+  "homepage": "https://github.com/jaysmit158/flashcards#readme"
+}
