@@ -2,9 +2,14 @@ const express = require('express');
 
 const app = express();
 
-app.get('/', (request, response) => {
-	response.send("test");
+app.get('/', (req, res) => {
+	res.send("<h1>test</h1>");
 
 });
 
-app.listen(3000);
+app.get('/hello', (req, res) => {
+	res.send("<h1>Hello, JavaScript Developer</h1>");
+
+});
+
+app.listen(3000, () => {console.log('app is running on port 3000!');});
