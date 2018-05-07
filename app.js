@@ -9,8 +9,8 @@ app.get('/', (req, res) => {
 
 });
 
-app.get('/hello', (req, res) => {
-	res.send("<h1>Hello, JavaScript Developer</h1>");
+app.get('/cards', (req, res) => {
+	res.render('card');
 
 });
 
