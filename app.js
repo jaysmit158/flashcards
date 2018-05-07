@@ -5,7 +5,7 @@ const app = express();
 app.set('view engine', 'pug');
 
 app.get('/', (req, res) => {
-	res.send("<h1>test</h1>");
+	res.render('index');
 
 });
 
