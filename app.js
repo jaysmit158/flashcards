@@ -19,4 +19,9 @@ app.get('/cards', (req, res) => {
 
 });
 
+app.get('/hello', (req, res) => {
+	res.render('hello');
+
+});
+
 app.listen(3000, () => {console.log('app is running on port 3000!');});
