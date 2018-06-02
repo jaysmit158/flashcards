@@ -31,14 +31,24 @@ app.get('/cards', (req, res) => {
 
 app.get('/hello', (req, res) => {
 	const name = req.cookies.username;
-	if (name)
-	res.render('hello');
+	if (name) {
+		res.redirect('/');
+	} else {
+		res.render('hello');
+	}
 });
 
 app.post('/hello', (req, res) => {
 	// console.dir(req.body);
 	res.cookie('username', req.body.username);
 	res.redirect('/');
+
+});
+
+app.post('/goodbye', (req, res) => {
+	
+	res.clearCookie('username');
+	res.redirect('/hello');
 
 });
 
