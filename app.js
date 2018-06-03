@@ -9,6 +9,13 @@ app.use(cookieParser());
 
 app.set('view engine', 'pug');
 
+// app.use((req,res,next) => {
+// 	console.log("hello");
+// 	const err = new Error("Oh No!")
+// 	err.status = 500;
+// 	next(err);
+// });
+
 app.get('/', (req, res) => {
 	const name = req.cookies.username;
 	if (name) {
@@ -51,10 +58,16 @@ app.post('/goodbye', (req, res) => {
 
 });
 
-app.use((err,req,res,next) => {
-	res.render('error', error);
-	}
-}
-}
+app.use((req, res, next) => {
+	const error = new Error('Not Found');
+	error.status = 404;
+	next(error);
+	});
+
+app.use((err, req, res, next) => {
+	res.locals.error = err;
+	res.status(err.status);
+	res.render('error');
+	});
 
 app.listen(3000, () => {console.log('app is running on port 3000!');});
