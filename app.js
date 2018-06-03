@@ -46,10 +46,15 @@ app.post('/hello', (req, res) => {
 });
 
 app.post('/goodbye', (req, res) => {
-	
 	res.clearCookie('username');
 	res.redirect('/hello');
 
 });
+
+app.use((err,req,res,next) => {
+	res.render('error', error);
+	}
+}
+}
 
 app.listen(3000, () => {console.log('app is running on port 3000!');});
