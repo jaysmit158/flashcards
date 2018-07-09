@@ -1,4 +1,7 @@
-router.get('/cards', (req, res) => {
+const express = require('express');
+const router = express.Router();
+
+router.get('/', (req, res) => {
 	res.render('card', 
 		{
 		prompt: "Who is buried in Grant's tomb?",
@@ -7,3 +10,5 @@ router.get('/cards', (req, res) => {
 	);
 
 });
+
+module.exports = router;
