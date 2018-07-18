@@ -3,11 +3,12 @@ const router = express.Router();
 const data = require('../data/flashcardData.json').data;
 const cards = data.cards;
 
-router.get('/', (req, res) => {
+router.get('/:id', (req, res) => {
 	res.render('card', 
 		{
-		prompt: cards[0].question,
-		 hint: cards[0].hint
+		//prompt: cards[0].question (previously)
+		prompt: cards[req.params.id].question,
+		 hint: cards[req.params.id].hint
 		}
 	);
 
