@@ -7,13 +7,13 @@ const { cards } = data;
 // const { cards } = data;
 
 router.get('/:id', (req, res) => {
-	const { side } = req.query.side;
-	const { id } = req.params.id;
-	const { text } = cards[id][side];
-	const { hint } = cards[id].hint;
+	const { side } = req.query;
+	const { id } = req.params;
+	const text = cards[id][side];
+	const hint = cards[id].hint;
 	const templateData = { text };
 
-	if ()
+	if () {}
 	res.render('card', templateData);
 
 });
