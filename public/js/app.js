@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
     hint.style.display = 'none';
 
     hintShowButton.addEventListener('click', (e) => {
-      hint.style.display = '';
+      hint.style.display = 'block';
       e.target.style.display = 'none';
     })
   }

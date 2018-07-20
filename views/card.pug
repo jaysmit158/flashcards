@@ -1,7 +1,7 @@
 extends app
 
 block card
-	section(class=`flashcards`)
+	section(class='flashcards')
 		.card(class=`card-${side}`)
 			.card-header
 			h1.card-title= side
@@ -10,12 +10,12 @@ block card
 				if hint
 					p.hint
 						i= hint
-				.card-flip-wrap
-					a(href=`${id}?side=${sideToShow}`)
-						img.card-flip(src='/static/img/flip.svg')
-				.card-next
-					a(href="/cards")
-						img(src="/static/img/next.svg")
+			.card-flip-wrap
+				a(href=`${id}?side=${sideToShow}`)
+					img.card-flip(src='/static/img/flip.svg')
+			.card-next
+				a(href="/cards")
+					img(src="/static/img/next.svg")
 	script(src="/static/js/app.js")
 						
 
